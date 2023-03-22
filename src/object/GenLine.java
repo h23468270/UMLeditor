@@ -14,10 +14,7 @@ public class GenLine extends Line{
 		this.x2 = x2;
 		this.y2 = y2;
 	}
-	public Line setLine(int x1, int y1,int x2,int y2) {
 
-		return new GenLine(x1,y1,x2,y2);
-	}
 	public void draw(Graphics g) {
 		g.drawLine(this.x1, this.y1, this.x2, this.y2);
 		
@@ -39,8 +36,5 @@ public class GenLine extends Line{
 
         g.fillPolygon(xpoints, ypoints, 3);
 	}
-	@Override
-	public String mouselocation(Point p) {
-		return null;
-	}
+
 }

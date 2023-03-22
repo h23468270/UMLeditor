@@ -2,7 +2,7 @@ package mode;
 
 import java.awt.Point;
 import java.awt.event.MouseEvent;
-import java.util.List;
+import java.util.ArrayList;
 
 import object.Element;
 import object.GroupElements;
@@ -12,7 +12,7 @@ import painter.Painter;
 public class drawLineMode extends Mode{
 	private Painter painter;
 	private Point point1 = null;
-	private List<Element> elements;
+	private ArrayList<Element> elements;
 	private int Port1 = -1, Port2 = -1;
 	private Element element1 = null, element2 = null;
 	
@@ -22,13 +22,13 @@ public class drawLineMode extends Mode{
 	}
 
 	public void mousePressed(MouseEvent e) {
-		elements = canvas.getElementList();
+		this.elements = canvas.getElementList();
 		this.point1 = findConnectedObj(e.getPoint(), 1);
 	}
 	//label override+
 	public void mouseDragged(MouseEvent e) {
 		if (this.point1 != null) {
-			Line line = this.painter.paintLine(this.point1, e.getPoint());
+			Line line = this.painter.paint(this.point1, e.getPoint());
 			this.canvas.setLine(line);
 			this.canvas.repaint();
 		}
@@ -41,7 +41,7 @@ public class drawLineMode extends Mode{
 			point2 = findConnectedObj(e.getPoint(), 2);
 			
 			if (point2 != null) {
-				Line line = this.painter.paintLine(this.point1, point2);
+				Line line = this.painter.paint(this.point1, point2);
 				
 				this.canvas.addElement(line);
 				line.setPorts(this.element1.getPort(this.Port1), this.element2.getPort(this.Port2));
@@ -64,7 +64,7 @@ public class drawLineMode extends Mode{
 			String position = element.mouselocation(p);
 			if (position != null) {
 				if(position == "4"){  
-					List<Element> g_elements = ((GroupElements)element).getElementList();
+					ArrayList<Element> g_elements = ((GroupElements)element).getElementList();
 					boolean check_empty = true;
 					for(int j = 0 ; j < g_elements.size(); j++)
 					{

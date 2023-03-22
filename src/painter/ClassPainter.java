@@ -3,10 +3,10 @@ package painter;
 import java.awt.Point;
 
 import object.Class;
-import object.Object;
+import object.Objects;
 
 public class ClassPainter extends Painter{
-	public Object paintObject(Point p) {
+	public Objects paint(Point p) {
 		return new Class(p.x, p.y);
 	}
 }

@@ -9,7 +9,7 @@ import java.util.List;
 
 
 public class GroupElements extends Element {
-	private List<Element> elements = new ArrayList<Element>();
+	private ArrayList<Element> elements = new ArrayList<Element>();
 	private Rectangle bounds = new Rectangle();
 	private Element selectedElement = null;
 	public void draw(Graphics g) {
@@ -111,7 +111,7 @@ public class GroupElements extends Element {
 		elements.add(element);
 	}
 
-	public List<Element> getElementList() {
+	public ArrayList<Element> getElementList() {
 		return elements;
 	}
 	
