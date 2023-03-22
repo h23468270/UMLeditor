@@ -13,7 +13,7 @@ public class drawObjMode extends Mode{
 	}
 	
 	public void mousePressed(MouseEvent e) {
-		Element obj = this.painter.paintObject(e.getPoint());
+		Element obj = this.painter.paint(e.getPoint());
 		this.canvas.addElement(obj);
 		this.canvas.repaint();
 	}

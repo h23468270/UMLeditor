@@ -11,7 +11,6 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.util.ArrayList;
 import java.util.EventListener;
-import java.util.List;
 
 //import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -27,7 +26,7 @@ public class UML_Canvas extends JPanel{
 	private Mode modetype;
 	private EventListener listener;
 	//private String modename;
-	private List<Element> elements = new ArrayList<Element>();
+	private ArrayList<Element> elements = new ArrayList<Element>();
 	private Element selectObj = null;
 	private Rectangle zone = new Rectangle();
 	private Line line = null;
@@ -147,7 +146,7 @@ public class UML_Canvas extends JPanel{
 		this.elements.add(element);
 	}
 	
-	public List<Element> getElementList(){
+	public ArrayList<Element> getElementList(){
 		return this.elements;
 	}
 	

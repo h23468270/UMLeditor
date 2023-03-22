@@ -3,7 +3,7 @@ package object;
 import java.awt.Color;
 import java.awt.Graphics;
 
-public class Class extends Object{
+public class Class extends Objects{
 	public Class(int x1, int y1) {
 		this.x1 = x1;
 		this.y1 = y1;

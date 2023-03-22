@@ -3,15 +3,15 @@ package painter;
 import java.awt.Point;
 
 import object.Line;
-import object.Object;
+import object.Objects;
 
 public abstract class Painter {
 	
-	public Line paintLine(Point P1, Point P2) {
+	public Line paint(Point P1, Point P2) {
 		return null;
 	}
 
-	public Object paintObject(Point p) {
+	public Objects paint(Point p) {
 		return null;
 	}
 

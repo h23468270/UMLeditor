@@ -5,7 +5,7 @@ import java.awt.Graphics;
 import java.awt.Point;
 import java.awt.Polygon;
 
-public class UseCase extends Object{
+public class UseCase extends Objects{
 	public UseCase(int x1, int y1) {
 		this.x1 = x1;
 		this.y1 = y1;
